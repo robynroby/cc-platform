@@ -1,0 +1,753 @@
+[
+    {
+        "type": "constructor",
+        "inputs": [
+            {
+                "name": "_authorization",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_analytic",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_subscription",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "createExclusiveContent",
+        "inputs": [
+            {
+                "name": "_title",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "_ipfsHash",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "_contentType",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "username",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "_creatorImage",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "createFreeContent",
+        "inputs": [
+            {
+                "name": "_title",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "_ipfsHash",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "_contentType",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "username",
+                "type": "string",
+                "internalType": "string"
+            },
+            {
+                "name": "_creatorImage",
+                "type": "string",
+                "internalType": "string"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "deleteExclusiveContent",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "deleteFreeContent",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "dislikeExclusiveContent",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "dislikeFreeContent",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "fetchCreatorAnalytics",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple",
+                "internalType": "struct AppLibrary.CreatorAnalytics",
+                "components": [
+                    {
+                        "name": "rating",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "followersCount",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "fetchExclusiveContent",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple[]",
+                "internalType": "struct AppLibrary.ContentItem[]",
+                "components": [
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "id",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "contentId",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dateCreated",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "creatorProfile",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "ipfsHash",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "creator",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "views",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "likes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dislikes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "shares",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "rating",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "contentType",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "creatorImage",
+                        "type": "string",
+                        "internalType": "string"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "fetchExclusiveContentAnalytics",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple",
+                "internalType": "struct AppLibrary.ContentAnalytics",
+                "components": [
+                    {
+                        "name": "likes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dislikes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "rating",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "fetchFollowers",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple[]",
+                "internalType": "struct AppLibrary.User[]",
+                "components": [
+                    {
+                        "name": "username",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "walletAddress",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "profileImage",
+                        "type": "string",
+                        "internalType": "string"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "fetchFreeContent",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple[]",
+                "internalType": "struct AppLibrary.ContentItem[]",
+                "components": [
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "id",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "contentId",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dateCreated",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "creatorProfile",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "ipfsHash",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "creator",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "views",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "likes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dislikes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "shares",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "rating",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "contentType",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "creatorImage",
+                        "type": "string",
+                        "internalType": "string"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "fetchFreeContentAnalytics",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple",
+                "internalType": "struct AppLibrary.ContentAnalytics",
+                "components": [
+                    {
+                        "name": "likes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dislikes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "rating",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "fetchMyExclusiveContent",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple[]",
+                "internalType": "struct AppLibrary.ContentItem[]",
+                "components": [
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "id",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "contentId",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dateCreated",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "creatorProfile",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "ipfsHash",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "creator",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "views",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "likes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dislikes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "shares",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "rating",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "contentType",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "creatorImage",
+                        "type": "string",
+                        "internalType": "string"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "fetchMyFreeContent",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple[]",
+                "internalType": "struct AppLibrary.ContentItem[]",
+                "components": [
+                    {
+                        "name": "title",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "id",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "contentId",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dateCreated",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "creatorProfile",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "ipfsHash",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "creator",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "views",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "likes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "dislikes",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "shares",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "rating",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                    },
+                    {
+                        "name": "contentType",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "creatorImage",
+                        "type": "string",
+                        "internalType": "string"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "followCreator",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "likeExclusiveContent",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "likeFreeContent",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "rateCreator",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_rating",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "rateExclusiveContent",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_rating",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "rateFreeContent",
+        "inputs": [
+            {
+                "name": "_id",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_rating",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "unFollowCreator",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    }
+]

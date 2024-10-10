@@ -1,0 +1,77 @@
+[
+    {
+        "type": "constructor",
+        "inputs": [
+            {
+                "name": "_tokenAddress",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "CreatorPayout",
+        "inputs": [
+            {
+                "name": "_amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "subscribe",
+        "inputs": [
+            {
+                "name": "_amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_subscriber",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "tipCreator",
+        "inputs": [
+            {
+                "name": "_amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_tipper",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    }
+]

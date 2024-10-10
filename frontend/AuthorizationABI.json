@@ -1,0 +1,137 @@
+[
+	{
+		"type": "function",
+		"name": "checkRegisteredUsers",
+		"inputs": [
+			{
+				"name": "_user",
+				"type": "address",
+				"internalType": "address"
+			}
+		],
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool",
+				"internalType": "bool"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
+		"name": "editProfile",
+		"inputs": [
+			{
+				"name": "_newProfileImage",
+				"type": "string",
+				"internalType": "string"
+			}
+		],
+		"outputs": [],
+		"stateMutability": "nonpayable"
+	},
+	{
+		"type": "function",
+		"name": "getAllUsers",
+		"inputs": [],
+		"outputs": [
+			{
+				"name": "",
+				"type": "tuple[]",
+				"internalType": "struct AppLibrary.User[]",
+				"components": [
+					{
+						"name": "username",
+						"type": "string",
+						"internalType": "string"
+					},
+					{
+						"name": "walletAddress",
+						"type": "address",
+						"internalType": "address"
+					},
+					{
+						"name": "profileImage",
+						"type": "string",
+						"internalType": "string"
+					}
+				]
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
+		"name": "getUserAddress",
+		"inputs": [
+			{
+				"name": "_username",
+				"type": "string",
+				"internalType": "string"
+			}
+		],
+		"outputs": [
+			{
+				"name": "",
+				"type": "address",
+				"internalType": "address"
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
+		"name": "getUserDetails",
+		"inputs": [
+			{
+				"name": "_userAddress",
+				"type": "address",
+				"internalType": "address"
+			}
+		],
+		"outputs": [
+			{
+				"name": "",
+				"type": "tuple",
+				"internalType": "struct AppLibrary.User",
+				"components": [
+					{
+						"name": "username",
+						"type": "string",
+						"internalType": "string"
+					},
+					{
+						"name": "walletAddress",
+						"type": "address",
+						"internalType": "address"
+					},
+					{
+						"name": "profileImage",
+						"type": "string",
+						"internalType": "string"
+					}
+				]
+			}
+		],
+		"stateMutability": "view"
+	},
+	{
+		"type": "function",
+		"name": "registerUser",
+		"inputs": [
+			{
+				"name": "_username",
+				"type": "string",
+				"internalType": "string"
+			},
+			{
+				"name": "_profileImage",
+				"type": "string",
+				"internalType": "string"
+			}
+		],
+		"outputs": [],
+		"stateMutability": "nonpayable"
+	}
+]

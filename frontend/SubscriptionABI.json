@@ -1,0 +1,205 @@
+[
+    {
+        "type": "constructor",
+        "inputs": [
+            {
+                "name": "_tokenAddress",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_vaultAddress",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_authorization",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "checkSubscribtionToCreatorStatus",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_subscriber",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool",
+                "internalType": "bool"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "fetchSubscribedTo",
+        "inputs": [
+            {
+                "name": "_subscriber",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple[]",
+                "internalType": "struct AppLibrary.User[]",
+                "components": [
+                    {
+                        "name": "username",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "walletAddress",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "profileImage",
+                        "type": "string",
+                        "internalType": "string"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "fetchSubscribers",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "tuple[]",
+                "internalType": "struct AppLibrary.User[]",
+                "components": [
+                    {
+                        "name": "username",
+                        "type": "string",
+                        "internalType": "string"
+                    },
+                    {
+                        "name": "walletAddress",
+                        "type": "address",
+                        "internalType": "address"
+                    },
+                    {
+                        "name": "profileImage",
+                        "type": "string",
+                        "internalType": "string"
+                    }
+                ]
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getCreatorSubscriptionAmount",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "payout",
+        "inputs": [
+            {
+                "name": "_amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "setMonthlySubscriptionAmount",
+        "inputs": [
+            {
+                "name": "_amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "subscribeToCreator",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "tipCreator",
+        "inputs": [
+            {
+                "name": "_creator",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    }
+]
