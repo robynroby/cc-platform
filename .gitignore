@@ -16,3 +16,5 @@ docs/
 src/try.sol
 
 .vscode/
+
+#forge script --chain sepolia script/CCP.s.sol:CCPScript --rpc-url $SEPOLIA_RPC_URL --broadcast --verify -vvvv
